@@ -19,3 +19,18 @@ console.log(count1);
 count1.reset();
 console.log(count1);
 console.log(count1);
+
+// Currying function
+//1. Without currying
+function curryAdd(a, b) {
+  return a + b;
+}
+console.log(curryAdd(2, 3)); // 5
+
+//2. With Currying
+function Add(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+console.log(Add(2)(3));
