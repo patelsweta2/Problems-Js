@@ -105,4 +105,30 @@ function chunks(array, size) {
 
 console.log(chunks([1, 2, 3, 4, 5, 6, 7, 8, 9], 2));
 
-//
+// Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
+const falsyArray = [1, 4, "", false, 0, null, 7, 8, undefined];
+
+function removeFalsy(array) {
+  let sol = [];
+  for (let i = 0; i < array.length; i++) {
+    if (
+      array[i] !== false &&
+      array[i] !== 0 &&
+      array[i] !== null &&
+      array[i] !== "" &&
+      array[i] !== undefined &&
+      array[i] !== NaN
+    ) {
+      sol.push(array[i]);
+    }
+  }
+  return sol;
+}
+
+console.log(removeFalsy(falsyArray));
+
+// optimize code
+function removeFalsy2(arr) {
+  return arr.filter(Boolean);
+}
+console.log(removeFalsy2(falsyArray));
