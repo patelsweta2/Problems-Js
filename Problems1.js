@@ -132,3 +132,15 @@ function removeFalsy2(arr) {
   return arr.filter(Boolean);
 }
 console.log(removeFalsy2(falsyArray));
+
+//Creates a new array concatenating array with any additional arrays and/or values.
+
+let arr = [1];
+let other = arr.concat(1, [3], [[4]]);
+console.log(other);
+
+let result = arr.concat(2, [3], [[4]]).flat();
+console.log(result);
+
+let others = [...arr, 1, ...[3], ...[[4]]];
+console.log(others);
